@@ -20,7 +20,10 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="StockFlow API", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://stockflow-gold-ten.vercel.app/"],
+    allow_origins=[
+        "https://stockflow-gold-ten.vercel.app",
+        "https://stockflow-git-main-anil-e5f6.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
