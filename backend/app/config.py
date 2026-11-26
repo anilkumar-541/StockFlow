@@ -3,14 +3,14 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 FRONTEND_ORIGINS = [
     origin.strip()
     for origin in os.getenv(
         "FRONTEND_ORIGINS",
-        "http://localhost:5173,http://127.0.0.1:5173,https://frontend-liard-alpha-26.vercel.app/,https://stockflow-vishnuvardhangopathi-6448.vercel.app/",
+        "http://localhost:5173,http://127.0.0.1:5173,https://stockflow-gold-ten.vercel.app",
     ).split(",")
     if origin.strip()
 ]
